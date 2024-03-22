@@ -21,7 +21,7 @@ body{
 }
 .container1{
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 1.5rem;
     display: flex;
     align-items: center;
@@ -30,6 +30,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    max-width: 750px;
 }
 .container1 .form{
     display: flex;
