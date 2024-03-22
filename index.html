@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+  <div class="container1" id="mainContainer">
+    <div class="form">
+      <h1>Stay updated!</h1>
+      <p>Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul>
+        <li><span><img src="./assets/images/icon-list.svg"></span><span>Product discovery and building what matters</span></li>
+        <li><span><img src="./assets/images/icon-list.svg"></span><span>Measuring to ensure updates are a success</span></li>
+        <li><span><img src="./assets/images/icon-list.svg"></span><span>And much more!</span></li>
+      </ul>
+      <form id="newsletterForm">
+        <div class="form-label">
+          <label>Email address</label><label class="valid" id="valid"></label>
+        </div>
+        <input type="text" id="emailInput" class="input" ] placeholder="email@company.com">
+        <input type="submit" class="btn" value="Subscribe to monthly newsletter">
+      </form>
+    </div>
+    <div class="banner">
+      <img src="./assets/images/illustration-sign-up-desktop.svg" class="desktop" >
+      <img src="./assets/images/illustration-sign-up-mobile.svg" class="mobile">
+    </div>
+  </div>
+  <div class="container2" id="successMessage" style="display:none;">
+      <img src="./assets/images/icon-success.svg" height="100px" width="100px">
+      <h1> Thanks for subscribing!</h1>
+      <p>A confirmation email has been sent to <span id="confirmationEmail"></span>. 
+        Please open it and click the button inside to confirm your subscription.
+      </p>
+        <div></div>
+        <button onclick="dismissMessage()">Dismiss message</button>
+  </div>
+
+  <script>
+    function dismissMessage() {
+      location.reload();
+      document.getElementById('successMessage').style.display = 'none';
+      document.getElementById('mainContainer').style.display = 'flex';
+    }
+
+    document.getElementById('newsletterForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var emailInput = document.getElementById('emailInput');
+      var email = emailInput.value;
+      var isValidEmail = validateEmail(email);
+      var notValid = document.getElementById('valid');
+      
+      if (!isValidEmail) {
+        emailInput.style.backgroundColor = "#ffe6e6";
+        emailInput.style.color = 'hsl(4, 100%, 67%)';
+        emailInput.style.border = '2px solid hsl(4, 100%, 67%)'
+        notValid.innerText = 'Valid email required';
+        return;
+      }
+
+      document.getElementById('confirmationEmail').innerText = email;
+      document.getElementById('successMessage').style.display = 'block';
+      document.getElementById('mainContainer').style.display = 'none';
+    });
+
+    function validateEmail(email) {
+      var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return regex.test(email);
+    }
+  </script>
+</body>
+</html>

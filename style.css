@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700;800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+
+}
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0%;
+    padding:0;
+}
+.banner img{
+    display: none;
+}
+@media only screen and (min-width: 769px){
+body{
+    background-color: var(--Charcoal-Grey);
+}
+.container1{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.container1 .form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 3rem;
+}
+.container1 .form h1{
+    font-size: 3rem;
+}
+.container1 .form p{
+    font-size: 16px;
+}
+.container1 .form ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.container1 .form ul li{
+    display: flex;
+    gap: 10px;
+}
+.container1 .form form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.container1 .form form label{
+    font-weight: 700;
+}
+.container1 .form form .input{
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--Grey);
+    font-size: 16px;
+}
+.container1 .form form .btn{
+    background-color: var(--Dark-Slate-Grey);
+    color: #fff;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border-style: none;
+}
+.container1 .form form .btn:hover{
+    background: rgb(255,87,87);
+    background: linear-gradient(90deg, rgba(255,87,87,1) 25%, rgba(255,144,39,1) 100%);
+    border-style: none;
+}
+.container1 .banner .desktop{
+    display: block;
+}
+.container1 .banner .mobile{
+    display: none;
+}
+.form-label{
+    display: flex;
+    justify-content: space-between;
+}
+.container1 .valid{
+    color: var(--Tomato);
+}
+.container2{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 400px;
+}
+.container2 h1{
+    margin-top: 20px;
+    font-size: 3rem;
+}
+.container2 p{
+    margin-top: 20px;
+    font-size: 16px;
+}
+.container2 p span{
+    font-weight: 700;
+}
+.container2 button{
+    margin-top: 30px;
+    background-color: var(--Dark-Slate-Grey);
+    color: #fff;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    border-style: none;
+}
+.container2 button:hover{
+    background: rgb(255,87,87);
+    background: linear-gradient(90deg, rgba(255,87,87,1) 25%, rgba(255,144,39,1) 100%);
+    border-style: none;
+}
+}
+@media only screen and (max-width: 768px){
+    body{
+        background-color: #fff;
+    }
+    .container1{
+        background-color: #fff;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+    }
+    .container1 .form{
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        gap: 2rem;
+        width: 80%;
+    }
+    .container1 .form h1{
+        font-size: 3rem;
+    }
+    .container1 .form p{
+        font-size: 16px;
+    }
+    .container1 .form ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .container1 .form ul li{
+        display: flex;
+        gap: 10px;
+    }
+    .container1 .form form{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .container1 .form form label{
+        font-weight: 700;
+    }
+    .container1 .form form .input{
+        padding: 20px;
+        border-radius: 8px;
+        border: 1px solid var(--Grey);
+        font-size: 16px;
+    }
+    .container1 .form form .btn{
+        background-color: var(--Dark-Slate-Grey);
+        color: #fff;
+        margin-top: 10px;
+        padding: 20px;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        border-style: none;
+    }
+    .container1 .invalid-email {
+        background-color: #ffe6e6; 
+        color: var(--Tomato);
+      }
+    .container1 .form form .btn:hover{
+        background: rgb(255,87,87);
+        background: linear-gradient(90deg, rgba(255,87,87,1) 25%, rgba(255,144,39,1) 100%);
+        border-style: none;
+    }
+    .form-label{
+        display: flex;
+        justify-content: space-between;
+    }
+    .banner .mobile{
+        display: block;
+        width: 100%;
+    }
+    .container1 .valid{
+    color: var(--Tomato);
+    }
+    .container2{
+        background-color: #ffffff;
+        height: 80vh;
+        display: flex;
+        gap: 2rem;
+        padding: 3rem;
+    }
+    .container2 h1{
+        margin-top: 20px;
+        font-size: 3rem;
+    }
+    .container2 p{
+        margin-top: 20px;
+        font-size: 20px;
+    }
+    .container2 p span{
+        font-weight: 700;
+    }
+    .container2 button{
+        margin-top: 30px;
+        background-color: var(--Dark-Slate-Grey);
+        color: #fff;
+        padding: 20px;
+        width: 100%;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        border-style: none;
+    }
+    .container2 button:hover{
+        background: rgb(255,87,87);
+        background: linear-gradient(90deg, rgba(255,87,87,1) 25%, rgba(255,144,39,1) 100%);
+        border-style: none;
+    }
+    
+}
